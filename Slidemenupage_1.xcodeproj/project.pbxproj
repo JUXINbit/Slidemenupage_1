@@ -94,10 +94,6 @@
 		031865A0204D097100C46A32 = {
 			isa = PBXGroup;
 			children = (
-				036A0ED52056463E00CA9B86 /* QYTitleInCombine.h */,
-				036A0ED62056463E00CA9B86 /* QYTitleInCombine.m */,
-				034E24A42052393800628FB4 /* QYCombineView.h */,
-				034E24A52052393800628FB4 /* QYCombineView.m */,
 				031865AB204D097100C46A32 /* Slidemenupage_1 */,
 				031865C4204D097100C46A32 /* Slidemenupage_1Tests */,
 				031865CF204D097100C46A32 /* Slidemenupage_1UITests */,
@@ -118,6 +114,10 @@
 		031865AB204D097100C46A32 /* Slidemenupage_1 */ = {
 			isa = PBXGroup;
 			children = (
+				036A0ED52056463E00CA9B86 /* QYTitleInCombine.h */,
+				036A0ED62056463E00CA9B86 /* QYTitleInCombine.m */,
+				034E24A42052393800628FB4 /* QYCombineView.h */,
+				034E24A52052393800628FB4 /* QYCombineView.m */,
 				036A0EDA205687B200CA9B86 /* Marco.h */,
 				031865AC204D097100C46A32 /* AppDelegate.h */,
 				031865AD204D097100C46A32 /* AppDelegate.m */,

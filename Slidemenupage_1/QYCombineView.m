@@ -8,6 +8,13 @@
 
 #import "QYCombineView.h"
 
+@interface QYCombineView ()
+
+@property (strong,nonatomic) UILabel* mainTitle;
+@property (strong,nonatomic) UILabel* subTitle;
+
+@end
+
 @implementation QYCombineView
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
@@ -25,5 +32,11 @@
         [self addSubview:self.subTitle];
     }
     return self;
+}
+
+- (void) updateData:(NSArray*)dataArray {
+    assert(dataArray);
+    self.mainTitle.text = dataArray[0];
+    self.subTitle.text = dataArray[1];
 }
 @end

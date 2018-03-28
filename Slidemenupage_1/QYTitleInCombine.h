@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface QYTitleInCombine : NSObject
-@property (strong,nonatomic)NSArray* mainTitleArray;
-@property (strong,nonatomic)NSArray* subTitleArray;
+
+@property (strong,nonatomic)NSMutableArray* dataInTitleArray;
+
 @end

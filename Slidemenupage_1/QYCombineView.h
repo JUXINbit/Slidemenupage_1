@@ -11,7 +11,7 @@
 #define randomColor RGBA(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
 
 @interface QYCombineView : UIView
-@property (strong,nonatomic) UILabel* mainTitle;
-@property (strong,nonatomic) UILabel* subTitle;
-- (instancetype) initWithFrame:(CGRect)frame;
+
+- (void) updateData:(NSArray*)dataArray;
+
 @end

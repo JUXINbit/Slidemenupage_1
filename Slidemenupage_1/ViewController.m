@@ -72,6 +72,7 @@
     self.menuTableController.view.frame = CGRectMake(0,65, SCREEN_WIDTH, SCREEN_HEIGTH);
     [self.leftMenuView addSubview:self.menuTableController.view];
 }
+
 - (void)setHeadTitleView{
     self.myHeadTitle = [[UILabel alloc]init];
     self.myHeadTitle.frame = CGRectMake(leftSideOfMenu, 0, self.view.frame.size.width-leftSideOfMenu, 60);

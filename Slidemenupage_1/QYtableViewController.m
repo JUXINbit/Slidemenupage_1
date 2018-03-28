@@ -19,7 +19,7 @@
 @interface QYtableViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (strong,nonatomic)UITableView* myTableView;
 @property (strong,nonatomic)UILabel*     myHeadTitle;
-@property (strong,nonatomic)QYTitleInCombine* titleInCombine;
+@property (nonatomic) QYTitleInCombine* titleInCombine;
 @end
 
 @implementation QYtableViewController
@@ -38,8 +38,6 @@
     [self.view addSubview:self.myTableView];
 }
 
-
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return NumberOfSection;
 }
@@ -49,10 +47,6 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    if(indexPath.section == 0)
-//        return 150;
-//    if(indexPath.section < 3)
-//        return 100;
     return 100;
 }
 
@@ -65,21 +59,13 @@
         if(!myCell){
             myCell = [[QYTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier_two cellForRowAtIndexPath:indexPath hasTwoCombineView:YES];
         }
-        myCell.myLeftIcon.mainTitle.text = self.titleInCombine.mainTitleArray[2*index];
-        myCell.myLeftIcon.subTitle.text = self.titleInCombine.subTitleArray[2*index];
-        myCell.myRightIcon.mainTitle.text = self.titleInCombine.mainTitleArray[2*index+1];
-        myCell.myRightIcon.subTitle.text = self.titleInCombine.subTitleArray[2*index+1];
+        [myCell updateData:self.titleInCombine.dataInTitleArray indexofArr:index numberOfCellsHasTwoComb:NumberOfTwoTableCell hasTwoCombines:YES];
     }else{
         myCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier_three];
         if(!myCell){
             myCell = [[QYTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier_three cellForRowAtIndexPath:indexPath hasTwoCombineView:NO];
         }
-        myCell.myLeftIcon.mainTitle.text = self.titleInCombine.mainTitleArray[3*index-NumberOfTwoTableCell];
-        myCell.myLeftIcon.subTitle.text = self.titleInCombine.subTitleArray[3*index-NumberOfTwoTableCell];
-        myCell.myMidIcon.mainTitle.text = self.titleInCombine.mainTitleArray[3*index-NumberOfTwoTableCell+1];
-        myCell.myMidIcon.subTitle.text = self.titleInCombine.subTitleArray[3*index-NumberOfTwoTableCell+1];
-        myCell.myRightIcon.mainTitle.text = self.titleInCombine.mainTitleArray[3*index-NumberOfTwoTableCell+2];
-        myCell.myRightIcon.subTitle.text = self.titleInCombine.subTitleArray[3*index-NumberOfTwoTableCell+2];
+        [myCell updateData:self.titleInCombine.dataInTitleArray indexofArr:index numberOfCellsHasTwoComb:NumberOfTwoTableCell hasTwoCombines:NO];
     }
     return myCell;
 }

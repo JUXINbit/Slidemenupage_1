@@ -10,8 +10,10 @@
 #import "QYCombineView.h"
 
 @interface QYTableViewCell : UITableViewCell
-@property (strong,nonatomic)QYCombineView* myLeftIcon;
-@property (strong,nonatomic)QYCombineView* myMidIcon;
-@property (strong,nonatomic)QYCombineView* myRightIcon;
+
 - (instancetype) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier cellForRowAtIndexPath: (NSIndexPath *)indexPath hasTwoCombineView:(BOOL) hasTwoCombine;
+- (void) updateData:(NSMutableArray*) dataArrInCellComb indexofArr:(NSUInteger)index numberOfCellsHasTwoComb:(NSUInteger)number hasTwoCombines:(BOOL)hasTwoCombs;
+
 @end
+
+
