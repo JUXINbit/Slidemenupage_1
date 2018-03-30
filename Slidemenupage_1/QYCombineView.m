@@ -34,7 +34,7 @@
     return self;
 }
 
-- (void) updateData:(NSArray*)dataArray {
+- (void)updateData:(NSArray*)dataArray {
     assert(dataArray);
     self.mainTitle.text = dataArray[0];
     self.subTitle.text = dataArray[1];

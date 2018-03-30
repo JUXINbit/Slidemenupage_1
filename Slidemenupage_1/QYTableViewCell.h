@@ -11,8 +11,8 @@
 
 @interface QYTableViewCell : UITableViewCell
 
-- (instancetype) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier cellForRowAtIndexPath: (NSIndexPath *)indexPath hasTwoCombineView:(BOOL) hasTwoCombine;
-- (void) updateData:(NSMutableArray*) dataArrInCellComb indexofArr:(NSUInteger)index numberOfCellsHasTwoComb:(NSUInteger)number hasTwoCombines:(BOOL)hasTwoCombs;
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier cellForRowAtIndexPath: (NSIndexPath *)indexPath hasTwoCombineView:(BOOL) hasTwoCombine;
+- (void)updateData:(NSMutableArray*) dataArrInCellComb indexofArr:(NSUInteger)index numberOfCellsHasTwoComb:(NSUInteger)number hasTwoCombines:(BOOL)hasTwoCombs;
 
 @end
 

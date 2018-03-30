@@ -16,7 +16,7 @@
 #define  CellIdentifier_two    @"two"
 #define  CellIdentifier_three  @"three"
 
-@interface QYtableViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface QYtableViewController () <UITableViewDataSource,UITableViewDelegate>
 @property (strong,nonatomic)UITableView* myTableView;
 @property (strong,nonatomic)UILabel*     myHeadTitle;
 @property (nonatomic) QYTitleInCombine* titleInCombine;
@@ -30,7 +30,7 @@
     self.titleInCombine = [[QYTitleInCombine alloc]init];
 }
 
-- (void)createMyTableView{
+- (void)createMyTableView {
     self.myTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0,[UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-65) style:UITableViewStylePlain];
     self.myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;                                         
     self.myTableView.delegate = self;

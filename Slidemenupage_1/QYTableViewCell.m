@@ -19,7 +19,7 @@
 
 @implementation QYTableViewCell
 
-- (instancetype) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier cellForRowAtIndexPath: (NSIndexPath *)indexPath hasTwoCombineView:(BOOL) hasTwoCombine {
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier cellForRowAtIndexPath: (NSIndexPath *)indexPath hasTwoCombineView:(BOOL) hasTwoCombine {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if(hasTwoCombine){
         self.myLeftIcon = [[QYCombineView alloc]initWithFrame:CGRectMake(leftSideOfMenu+15, 5, (widthOfMenu-30)/2-5, 90)];
@@ -38,7 +38,7 @@
     return self;
 }
 
-- (void) updateData:(NSMutableArray*) dataArrInCellComb indexofArr:(NSUInteger)index numberOfCellsHasTwoComb:(NSUInteger)number hasTwoCombines:(BOOL)hasTwoCombs {
+- (void)updateData:(NSMutableArray*) dataArrInCellComb indexofArr:(NSUInteger)index numberOfCellsHasTwoComb:(NSUInteger)number hasTwoCombines:(BOOL)hasTwoCombs {
     assert(dataArrInCellComb);
     if(hasTwoCombs){
         [self.myLeftIcon updateData:dataArrInCellComb[2*index]];
